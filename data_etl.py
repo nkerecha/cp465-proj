@@ -14,7 +14,7 @@ nltk.download('wordnet', quiet=True)
 # Data Processing 
 
 #PATH = r"C:\\Users\\tedma\\Desktop\\cp465_project\\data"
-PATH = "data"
+PATH = r"static\\data"
 lemmatizer = WordNetLemmatizer()
 porter = PorterStemmer()
 stop_words = set(stopwords.words('english'))
