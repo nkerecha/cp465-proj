@@ -3,7 +3,6 @@ from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
 from nltk.stem.porter import *
-import matplotlib.pyplot as plt
 import os
 import string
 import email
@@ -139,7 +138,7 @@ def search_not(inverted_index: dict, term1:str, term2:str) -> list:
     return results
     
 def print_lines(results:list) -> None:
-    if len(results) is 0:
+    if len(results) == 0:
         print("Search returned no results")
         final_text = {}
         final_text[0] = 'No resukts for this search'
