@@ -1,10 +1,8 @@
 # Necesarry imports
-import pandas as pd
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
 from nltk.stem.porter import *
-import numpy as np
 import matplotlib.pyplot as plt
 import os
 import string
