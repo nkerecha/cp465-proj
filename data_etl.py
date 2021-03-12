@@ -157,7 +157,7 @@ def print_lines(results:list) -> None:
             line_count = 0
         
             #get the contents of document
-            file_content =  open(PATH+"\\"+i, 'r',encoding="utf8").read()      
+            file_content =  open(PATH+"/"+i, 'r',encoding="utf8").read()      
             msg = email.message_from_string(file_content)
             fin = ""
             for part in msg.walk():
