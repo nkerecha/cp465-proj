@@ -1,0 +1,1 @@
+MySQL Database Service with HeatWave. MySQL Database Service is a fully managed database service to deploy cloud-native applications. HeatWave, an integrated, high-performance analytics engine accelerates MySQL performance by 400x.

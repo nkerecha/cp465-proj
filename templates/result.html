@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 <meta name="author" content="Naftal Teddy Kerecha"/>
-<title>CP465 Search Engine</title>
+<title>CP465 Search Result</title>
 
 <link rel="icon" href="https://img.icons8.com/fluent/32/000000/search-client.png">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -20,6 +20,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <!-- Latest compiled JavaScript -->
+
 <link rel="stylesheet" href="static/css/styles.css" type="text/css"/>
 </head>
 <body>
@@ -52,26 +53,28 @@
         </nav>
 
       </div>
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <div id="details" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item active" aria-current="page">{{records}} Search results for <strong>&nbsp;"{{search_name}}"</strong></li>
+        </ol>
+      </div>
+    <ol> 
+       
+        <!-- For loop logic of jinja template -->
+        {%for i in res%} 
+        <div class="card">
+            <div class="card-header">
+                {{i}}
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"></h5>
+              <p class="card-text">{{res.get(i)}}.</p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        {%endfor%} 
       
-        <form class="search-container" action="result" method="post">
-          <input type="text" id="search-bar" name="search-entry" placeholder="Type your two word search" required>
-          <button type="submit" id="search-btn" class="btn btn-outline-primary">Search</button>
-        </form>
-    
-
-  <!-- For loop logic of jinja template -->
-
-  <div class="card search-container" id="accepted">
-    <div class="card-header">
-      Based on our data the following are searches that will return data
-    </div>
-    {%for i in range(0, len)%} 
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">{{Pokemons[i]}}</li>
-    </ul>
-    {%endfor%} 
-  </div>
-    
+    </ol> 
 </body>
 </html>
