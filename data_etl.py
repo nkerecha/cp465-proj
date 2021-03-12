@@ -14,7 +14,7 @@ nltk.download('wordnet', quiet=True)
 # Data Processing 
 
 #PATH = r"C:\\Users\\tedma\\Desktop\\cp465_project\\data"
-PATH = r"static\\data"
+PATH = r"static/data"
 lemmatizer = WordNetLemmatizer()
 porter = PorterStemmer()
 stop_words = set(stopwords.words('english'))
@@ -29,7 +29,7 @@ word_dict = {}
 for file in files:
     
     #get file contents
-    file_content = open(PATH+"\\"+file, 'r',encoding="utf8").read()
+    file_content = open(PATH+"/"+file, 'r',encoding="utf8").read()
 
 
     #get the contents of email
