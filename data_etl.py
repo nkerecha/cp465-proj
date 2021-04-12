@@ -29,7 +29,7 @@ word_dict = {}
 for file in files:
     
     #get file contents
-    file_content = open(PATH+"/"+file, 'r',encoding="utf8").read()
+    file_content = open(PATH+"/"+file, 'r',encoding='latin1').read()
 
 
     #get the contents of email
